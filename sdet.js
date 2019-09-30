@@ -1,6 +1,4 @@
-let word = "tacocat";
-
-function isPalindrome(s){
+function isPalindrome(s=''){
   let substring = ""
 
   if (s.length == 1 || s.length == 0 ){ //words that are length 1 are considered a palindrome
@@ -19,9 +17,9 @@ function isPalindrome(s){
   }     
 }
 
-function reverseTheWords(s){
-  let arr= s.split(' '); //put this into an array
-  let final= ""
+function reverseTheWords(s =''){
+  const  arr= s.split(' '); //put this into an array
+  let final= "";
   arr.reverse(); //JS has a built in reverse function
   for (let i =0; i< arr.length;  i++){
     final+= `${arr[i]} `; //add the words back into a string
@@ -29,11 +27,13 @@ function reverseTheWords(s){
   console.log(final); 
 }
 
-function filterZeros(arrayOfNumbers){
+function filterZeros(arrayOfNumbers=[]){
   let f = arrayOfNumbers.filter((n) => ( n!=0));  //JS has built in filter function if it meets the criteria in the callback funciton
   console.log(f);
 }
 
+
+let word = "tacocat";
 
 isPalindrome(word);
 reverseTheWords("This is a sentence");
